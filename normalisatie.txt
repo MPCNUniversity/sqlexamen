@@ -1,0 +1,88 @@
+landen
+---------------
+land_id				pk
+naam
+landcode
+
+
+---------------------------------------------------------------------
+
+steden
+--------------
+stad_id				pk
+naam
+postcode
+
+
+---------------------------------------------------------------------
+
+hotels
+-------------
+hotel_id			pk
+addres
+stad_id				fk -> steden
+land_id				fk -> landen
+receptionisten_id		fk -> receptionisten
+kamertype_id			fk -> kamer_types
+
+
+
+--------------------------------------------------------------------------
+
+kamer_types
+---------------
+kamertype_id			pk
+kamertype
+hotel_id			fk -> hotels
+
+------------------------------------------------------------------------
+
+receptionisten
+-----------------
+receptionist_id			pk
+voornaam 
+familienaam
+adres
+stad_id				fk -> steden
+land_id				fk -> landen
+
+-----------------------------------------------------------------------
+
+
+reserveringen
+-------------------------
+reserverings_id			pk
+reserverings_datum		
+gast_id				fk -> gasten
+hotel_id			fk -> hotels
+kamer				fk -> kamers
+
+
+----------------------------------------------------------------------
+
+
+gasten
+----------------
+gast_id				pk	int
+gast_voornaam
+gast_familienaam
+gast_email
+
+
+
+---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
